@@ -1,0 +1,132 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Inclusive, warm bonding color palette with dusty pink */
+    --background: 340 20% 95%;
+    --foreground: 210 15% 15%;
+
+    --card: 45 30% 98%;
+    --card-foreground: 210 15% 15%;
+
+    --popover: 45 30% 98%;
+    --popover-foreground: 210 15% 15%;
+
+    --primary: 210 40% 50%;
+    --primary-foreground: 45 30% 98%;
+
+    --secondary: 35 25% 85%;
+    --secondary-foreground: 210 15% 25%;
+
+    --muted: 40 20% 92%;
+    --muted-foreground: 210 15% 45%;
+
+    --accent: 30 35% 75%;
+    --accent-foreground: 210 15% 25%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 330 25% 90%;
+    --input: 330 25% 90%;
+    --ring: 210 40% 50%;
+
+    /* Custom bonding colors */
+    --sage-green: 150 25% 65%;
+    --warm-amber: 40 50% 75%;
+    --soft-blue: 210 30% 80%;
+    --gentle-cream: 45 40% 92%;
+    --deep-sage: 150 25% 45%;
+    
+    /* Gradients */
+    --gradient-bonding: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--sage-green)));
+    --gradient-soft: linear-gradient(180deg, hsl(var(--gentle-cream)), hsl(var(--warm-amber)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--sage-green)));
+    
+    /* Enhanced 3D Shadows */
+    --shadow-bonding: 0 10px 30px -10px hsl(var(--primary) / 0.3);
+    --shadow-soft: 0 4px 20px -4px hsl(var(--sage-green) / 0.2);
+    --shadow-3d: 0 8px 20px -5px hsl(var(--primary) / 0.2), 0 4px 8px -2px hsl(var(--primary) / 0.1);
+    --shadow-3d-lift: 0 12px 35px -8px hsl(var(--primary) / 0.25), 0 8px 15px -3px hsl(var(--primary) / 0.15), inset 0 1px 0 hsl(340 30% 98%);
+    --shadow-3d-deep: 0 15px 40px -10px hsl(var(--primary) / 0.3), 0 10px 20px -5px hsl(var(--primary) / 0.2), inset 0 2px 0 hsl(340 30% 98%), inset 0 -2px 4px hsl(var(--primary) / 0.1);
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 340 15% 8%;
+    --foreground: 340 30% 95%;
+
+    --card: 340 15% 10%;
+    --card-foreground: 340 30% 95%;
+
+    --popover: 340 15% 10%;
+    --popover-foreground: 340 30% 95%;
+
+    --primary: 340 65% 65%;
+    --primary-foreground: 340 15% 8%;
+
+    --secondary: 340 15% 15%;
+    --secondary-foreground: 340 30% 90%;
+
+    --muted: 340 15% 15%;
+    --muted-foreground: 340 15% 65%;
+
+    --accent: 340 15% 15%;
+    --accent-foreground: 340 30% 90%;
+
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 340 30% 95%;
+
+    --border: 340 15% 20%;
+    --input: 340 15% 20%;
+    --ring: 340 65% 65%;
+
+    /* Dark mode bonding colors */
+    --sage-green: 150 20% 60%;
+    --warm-amber: 40 45% 70%;
+    --soft-blue: 210 25% 75%;
+    --gentle-cream: 45 35% 85%;
+    --deep-sage: 150 35% 55%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}

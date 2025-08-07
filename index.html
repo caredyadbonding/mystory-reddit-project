@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-TDJC7NST');</script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Reddit Pixel -->
+  <script defer>
+    !function (w, d) {
+      var r = w.rdt = w.rdt || [];
+      r.methods = ["track", "disable", "enable", "identify", "convert", "alias"];
+      r.factory = function (t) {
+        return function () {
+          var e = Array.prototype.slice.call(arguments);
+          e.unshift(t), r.push(e);
+          return r;
+        };
+      };
+      r.methods.forEach(function (t) {
+        r[t] = r.factory(t);
+      });
+      r.load = function (t) {
+        var e = document.createElement("script");
+        e.src = "https://www.redditstatic.com/ads/pixel.js";
+        e.async = true;
+        var n = document.getElementsByTagName("script")[0];
+        n.parentNode.insertBefore(e, n);
+        r.init = t;
+      };
+      r.load("a2_hearjwqykdo3");
+      r.track("PageVisit");
+    }(window, document);
+  </script>
+  <!-- End Reddit Pixel -->
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>My Story. Your Story. Our Story. Our Community.</title>
+  <meta name="description" content="A heartfelt storytelling project by caregivers, for caregivers." />
+  <meta name="author" content="Nuvori" />
+
+  <meta property="og:title" content="My Story. Your Story. Our Story." />
+  <meta property="og:description"
+    content="A community-driven space for healing, support, and shared caregiving stories." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/uploads/nuvori-opengraph.png" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@nuvori_ai" />
+  <meta name="twitter:image" content="/uploads/nuvori-opengraph.png" />
+
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TDJC7NST" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
+</body>
+
+</html>
